@@ -1,23 +1,17 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component, OnInit } from '@angular/core';
+import { IProduto, produtos } from '../produtos';
 
-import { ProdutosComponent } from './produtos.component';
 
-describe('ProdutosComponent', () => {
-  let component: ProdutosComponent;
-  let fixture: ComponentFixture<ProdutosComponent>;
+@Component({
+  selector: 'app-produtos',
+  templateUrl: './produtos.component.html',
+  styleUrls: ['./produtos.component.scss']
+})
+export class ProdutosComponent implements OnInit {
+ produtos: IProduto[] = produtos;
+  constructor() { }
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ ProdutosComponent ]
-    })
-    .compileComponents();
+  ngOnInit(): void {
+  }
 
-    fixture = TestBed.createComponent(ProdutosComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+}
