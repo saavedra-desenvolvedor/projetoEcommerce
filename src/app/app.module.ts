@@ -6,10 +6,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada/pagina-nao-encontrada.component';
 import { ProdutosComponent } from './produtos/produtos.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, ProdutosComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, ProdutosComponent,PaginaNaoEncontradaComponent ],
   imports: [BrowserModule, AppRoutingModule,FormsModule ],
   providers: [],
   bootstrap: [AppComponent],
