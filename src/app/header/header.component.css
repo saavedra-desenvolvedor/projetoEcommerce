@@ -36,6 +36,7 @@
   font-size: 22px;
   text-decoration: none;
   transition: all .3s ease-in-out;
+  cursor: pointer;
 }
 
 .main-header__menu a:hover {
@@ -81,4 +82,5 @@
   border:none;
   color: #fff;
   font-size: 22px;
+  cursor: pointer;
 }
