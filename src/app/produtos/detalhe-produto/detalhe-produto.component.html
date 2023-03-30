@@ -1,24 +1,19 @@
 <section class="product__container">
-  <div class="product-image__container">
-    <img
-      src="https://cdn.pixabay.com/photo/2013/07/13/14/06/keyboard-162134_1280.png"
-      alt="erro imagem"
-    />
-  </div>
-  <div class="product-description__container">
-  <h2 class="product__name">Teclado super fino</h2>
-  <h3 class="product__price">R$ 280,00</h3>
-  <p>Estoque disponível:</p>
-  <label>
-    Quantidade:
-    <input type="number">
-    unidade(s)
-    <p class="product__avaiability">
-    10 unidades em estoque
-    </p>
-    <button>Adicionar ao carrinho</button>
-
-  
-  </label>
-  </div>
+<div class="product-image__container">
+  <img [src]="produto?.imagem"  alt="erro imagem" />
+</div>
+<div class="product-description__container">
+<h2 class="product__name">{{ produto?.descricao }}</h2>
+<h3 class="product__price">{{ produto?.preco | currency: "BRL"  }}</h3>
+<p>Estoque disponível:</p>
+<label>
+  Quantidade:
+  <input type="number" [(ngModel)] = "quantidade" min="1">
+  unidade(s)
+  <p class="product__avaiability"> 
+  {{ produto?.quantidadeEstoque }}  unidades em estoque
+  </p>
+  <button>Adicionar ao carrinho</button>  
+</label>
+</div>
 </section>
