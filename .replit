@@ -2,6 +2,7 @@ run = "npm run start"
 entrypoint = "src/index.html"
 
 hidden = [".config"]
+compile = "./.config/build.sh"
 
 [nix]
 channel = "stable-22_05"
@@ -18,3 +19,14 @@ language = "nodejs"
   packageSearch = true
   guessImports = true
   enabledForHosting = false
+
+[languages]
+
+[languages.typescript]
+pattern = "**/{*.ts,*.js,*.tsx,*.jsx}"
+
+[languages.typescript.languageServer]
+start = "typescript-language-server --stdio"
+
+[gitHubImport]
+requiredFiles = [".replit", "replit.nix", ".config"]
