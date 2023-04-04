@@ -1,5 +1,5 @@
 
-import { NgModule } from '@angular/core';
+import { enableProdMode, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -11,7 +11,7 @@ import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada/pagin
 //import { ProdutosComponent } from './produtos/produtos.component';
 import { MatSnackBarModule } from "@angular/material/snack-bar";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+enableProdMode();
 @NgModule({
   declarations: [AppComponent, HeaderComponent, FooterComponent,PaginaNaoEncontradaComponent ],
   imports: [BrowserModule,BrowserAnimationsModule, AppRoutingModule,FormsModule, MatSnackBarModule ],
