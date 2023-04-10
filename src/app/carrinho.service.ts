@@ -10,7 +10,7 @@ export class CarrinhoService {
   constructor() {}
 
   obtemCarrinho() {
-    return JSON.parse(localStorage.getItem('carrinho') || '');
+    return JSON.parse(localStorage.getItem('carrinho') || '[]');
   }
   adicionarAoCarrinho(produto: IProdutoCarrinho) {
     this.itens.push(produto);
