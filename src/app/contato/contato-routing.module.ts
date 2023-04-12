@@ -8,4 +8,3 @@ const routes: Routes = [{ path: '', component:  ContatoComponent }];
   exports: [RouterModule]
 })
 export class ContatoRoutingModule { }
-
