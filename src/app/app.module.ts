@@ -1,6 +1,6 @@
 
 import { enableProdMode, NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormBuilder, FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -15,7 +15,7 @@ enableProdMode();
 @NgModule({
   declarations: [AppComponent, HeaderComponent, FooterComponent,PaginaNaoEncontradaComponent ],
   imports: [BrowserModule,BrowserAnimationsModule, AppRoutingModule,FormsModule, MatSnackBarModule ],
-  providers: [],
+  providers: [FormBuilder],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

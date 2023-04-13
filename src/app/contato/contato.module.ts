@@ -11,6 +11,7 @@ import { ContatoComponent } from './contato.component';
     CarrinhoRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+ 
   ],
 })
 export class ContatoModule {}
