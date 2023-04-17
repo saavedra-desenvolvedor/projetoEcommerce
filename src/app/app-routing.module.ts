@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ContatoComponent } from './contato/contato.component';
 import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada/pagina-nao-encontrada.component';
 
 const routes: Routes = [
@@ -9,13 +8,17 @@ const routes: Routes = [
     loadChildren: () =>
       import('./produtos/produtos.module').then((m) => m.ProdutosModule),
   },
+  { path: '', redirectTo: 'produtos', pathMatch: 'full' },
+  {
+    path: 'contato',
+    loadChildren: () =>
+      import('./contato/contato.module').then((m) => m.ContatoModule),
+  },
   {
     path: 'carrinho',
     loadChildren: () =>
       import('./carrinho/carrinho.module').then((m) => m.CarrinhoModule),
   },
-  { path: 'contato', component: ContatoComponent },
-  { path: '', redirectTo: 'produtos', pathMatch: 'full' },
   { path: '**', component: PaginaNaoEncontradaComponent },
 ];
 
