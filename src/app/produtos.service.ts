@@ -1,17 +1,18 @@
-import { Injectable } from '@angular/core';
-import { IProduto, produtos } from './produtos';
+import { Injectable } from '@angular/core';
+import { IProduto, produtos } from './produtos';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-export class ProdutosService {
-  produtos: IProduto[] = produtos;
-  constructor() {}
+export class ProdutosService {
+  produtos: IProduto[] = produtos;
+  quantidade = 1;
+  constructor() {}
 
-  getAll() {
-    return this.produtos;
-  }
-  getOne(produtoId: number) {
-    return this.produtos.find((produto) => (produto.id = produtoId));
-  }
+  getAll() {
+    return this.produtos;
+  }
+  getOne(produtoId: number) {
+    return this.produtos.find((produto) => produto.id == produtoId);
+  }
 }
