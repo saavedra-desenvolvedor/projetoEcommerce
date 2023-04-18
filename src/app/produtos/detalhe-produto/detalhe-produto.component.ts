@@ -25,14 +25,15 @@ export class DetalheProdutoComponent implements OnInit {
     const routeParams = this.route.snapshot.paramMap;
     const produtoId = Number(routeParams.get('id'));
     this.produto = this.produtosService.getOne(produtoId);
+    console.log(this.produto);
   }
   adicionarAoCarrinho() {
     alert('O produto foi adicionado ao carrinho');
     //this.notificacaoService.notificar('O produto foi adicionado ao carrinho');
-    const produto: IProdutoCarrinho ={
+    const produto: IProdutoCarrinho = {
       ...this.produto!,
-      quantidade : this.quantidade,
-    }
+      quantidade: this.quantidade,
+    };
     this.carrinhoService.adicionarAoCarrinho(produto);
   }
 }
