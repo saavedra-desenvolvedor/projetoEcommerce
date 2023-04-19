@@ -4,6 +4,7 @@ import { CarrinhoService } from '../../carrinho.service';
 import { NotificacaoService } from '../../notificacao.service';
 import { IProduto, IProdutoCarrinho } from '../../produtos';
 import { ProdutosService } from '../../produtos.service';
+import swal from 'sweetalert';
 
 @Component({
   selector: 'app-detalhe-produto',
@@ -28,8 +29,13 @@ export class DetalheProdutoComponent implements OnInit {
     console.log(this.produto);
   }
   adicionarAoCarrinho() {
-    alert('O produto foi adicionado ao carrinho');
+    swal({
+      title: 'O produto foi adicionado ao carrinho!',
+      //text: "You clicked the button!",
+      icon: 'success',
+    });
     //this.notificacaoService.notificar('O produto foi adicionado ao carrinho');
+
     const produto: IProdutoCarrinho = {
       ...this.produto!,
       quantidade: this.quantidade,
